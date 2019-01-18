@@ -1,11 +1,19 @@
 // Home Content
 
 .home {
-
+  @media @phone {
+    max-width: 500px;
+    border: 1px solid red;
+  }
+  
   .intro {
 
     img {
       border-radius: .5rem;
+      @media @phone {
+        max-width: 500px;
+        width: 100%;
+      }
     }
 
     h2 {
@@ -22,12 +30,28 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone {
+      flex-direction: column;
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        width:92%;
+      }
+    }
+    .sky {
+      @media @phone {
+        display: none;
+      }
+    }
+    .launch {
+      @media @phone {
+        display: none;
+      }
     }
   }
 
@@ -49,6 +73,12 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 15px;
+      margin-top:15px;
+      // border-top: none;
+    }
 
     .walk-text {
       width: 50%;
@@ -68,12 +98,18 @@
         a {
           text-decoration: none;
         }
+        @media @phone {
+          width: 100%;
+        }
       
     }
 // .sign-up-btn(background color, font color, font size)
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        width: 92%;
+      }
       
       img {
         width: 100%;
