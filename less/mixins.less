@@ -1,1 +1,15 @@
 // Mixins Here
+// .sign-up-btn(background color, font color, font size)
+
+.sign-up-btn(@bg-color, @font-color, @font-size){
+    background-color: @bg-color;
+    color: @font-color;
+    font-size: @font-size;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1rem;
+    &:hover {
+        color: @bg-color;
+        background-color: @font-color;
+    }
+}
