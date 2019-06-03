@@ -1,16 +1,33 @@
 // Home Content
 
 .home {
-
+  @media @phone {
+    max-width: 500px;
+    border: 1px solid red;
+    padding: 0;
+  }
+  
   .intro {
 
-    h2 {
+    img {
+      border-radius: .5rem;
+      @media @phone {
+        max-width: 500px;
+        width: 100%;
+      }
+    }
+    .copy {
       padding: 15px;
-    }
+      margin: 0 1%;
+      @media @phone{
+        padding: 10px 3% 0 3%;
+      }
 
-    p {
-      padding:0 15px;
+      p {
+        padding-top: 15px;
+      }
     }
+   
   
   }
 
@@ -18,12 +35,33 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      margin: 0;
+      padding: 4% 6%;
+    }
 
     img {
       width: 28%;
-      margin: 20px 2.5%;
+      margin: 00px 2.5% 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        width:100%;
+        margin: 0;
+      }
+    }
+    .sky {
+      @media @phone {
+        display: none;
+      }
+    }
+    .launch {
+      @media @phone {
+        display: none;
+      }
     }
   }
 
@@ -45,9 +83,21 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    @media @phone {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 15px 0;
+      margin: 15px 2.5%;
+      // border-top: none;
+    }
 
     .walk-text {
       width: 50%;
+      @media @phone {
+        width: 100%;
+        padding-top: 2rem;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +108,22 @@
       }
 
       .btn {
-      }
+        width: 30%;
+        .sign-up-btn(@header-font-color, white, 2rem);
+        }
+        a {
+          text-decoration: none;
+        }
+        
+      
     }
-
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      @media @phone {
+        width: 100%;
+        margin-left:0;
+      }
       
       img {
         width: 100%;

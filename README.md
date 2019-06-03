@@ -34,13 +34,21 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+Adaptive sites use media queries but their layout widths are hard-coded, meaning that they'll adjust down to the break point, but then not until the next one. It means that the display changes size in step functions, rather than dynamically. 
+
 2. Describe what it means to be mobile first vs desktop first.
+Mobile first websites are optimized to the smallest breakpoint first, then adjusted for larger screens. The media queries use the syntax "min-width" rather than "max-width"
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
+font-size: 62.5%
+The font-size property is used to compute the size of relative text measurement units. The default font-size (1 rem) in px is 16. By setting it to 62.5% (10px), you're setting 1 rem to equal 10px, making future adjustments in rem less of a math exercise. I.e. if your designer calls for a font size of 18 px, you can set it to 1.8rem rather than (18/16)rem. By adjusting the settting on the html tag, you are saying that all future fonts will be measured relative to the highest-level font-size.
 
 4. How would you describe preprocessing to someone new to CSS?
+Preprocessing takes an input (programming syntax specific to the preprocessor you're using), performs transformations on it, and produces an output in the form of machine-readable css code. 
 
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+I love nesting and importing. Using semantic HTML makes that side of the equation easy to read and logical to edit. Nesting allows for very similar code structure on the styling side of things, and importing allows you to further organize your style sheet for ease of use. 
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
@@ -135,3 +143,5 @@ After finishing your required elements, you can push your work further. These go
 * [ ] Create a fixed navigation and add some opacity to the background
 
 * [ ] Create a form that would allow someone to sign up for a Spacewalkers Magazine subscription
+
+small edit to push
